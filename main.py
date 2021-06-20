@@ -11,5 +11,5 @@ for i, el in enumerate(to_buy):
     print(i, el)
 i = 1
 while True:
-    i += 1
-    print(i)
+    i+=1
+    print (i)
