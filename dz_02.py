@@ -9,11 +9,7 @@ for i, current_digit in enumerate(cube_list):
     current_summ = 0
     while current_digit > 0:
         current_summ += current_digit % 10
-        print('current_summ', current_summ)
         current_digit = current_digit // 10
-    print("current_digit", current_digit)
-    print('current_summ', current_summ)
-
     if current_summ % 7 == 0:
         result_a += int(cube_list[i])
 
@@ -21,19 +17,13 @@ for i, current_digit in enumerate(cube_list):
 result_b = 0
 for i, current_digit in enumerate(cube_list):
     current_summ = 0
-    current_digit+=17
+    current_digit += 17
     while current_digit > 0:
         current_summ += current_digit % 10
-        print('current_summ', current_summ)
         current_digit = current_digit // 10
-    print("current_digit", current_digit)
-    print('current_summ', current_summ)
-
     if current_summ % 7 == 0:
-        result_b += int(cube_list[i])+17
+        result_b += int(cube_list[i]) + 17
 
 print('Список кубов нечетных чисел:\n', cube_list)
 print('\nСумма чисел из пункта a:', result_a)
 print('Сумма чисел из пункта b:', result_b)
-
-
