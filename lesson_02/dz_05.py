@@ -5,7 +5,7 @@ string_for_print = ''
 
 print('Задание А. Список цен по формату')
 for i, item in enumerate(input_list):
-    rub = int(item // 1)
+    rub = int(item)
     penny = int((item % 1) * 101)  # проверить выражение, некоторые числа меньше на 1
     input_list[i] = f'{rub} руб {penny:02d} коп'
 print(", ".join(input_list))
