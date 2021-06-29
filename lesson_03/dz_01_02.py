@@ -3,10 +3,12 @@
 def num_translate_adv(word):
     dictionary = {'one': 'один', 'two': 'два', 'three': 'три', 'four': 'четыре', 'five': 'пять', 'six': 'шесть',
                   'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
-    title = True if word.istitle() else False
+    title = word.istitle()
     word = word.lower()
-    translated_word = dictionary[word] if word in dictionary.keys() else None
-    return translated_word.title() if title else translated_word
+    translated_word = dictionary.get(word)
+    if translated_word != None:
+        translated_word = translated_word.title() if title else translated_word
+    return translated_word
 
 
 word = input('Введите число на английском или «Enter» для выхода из программы:\n')
