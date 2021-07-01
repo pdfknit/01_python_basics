@@ -1,5 +1,5 @@
 from requests import get
-import datetime
+from datetime import date
 
 
 def currency_rates(argv):
@@ -13,7 +13,7 @@ def currency_rates(argv):
             if money_code in recent_valute:
                 course_to_rub = float(recent_valute.split('<Value>')[1].strip('</Value></Valute>').replace(',', '.'))
         date_list = all_courses.split('Date="')[1].split('"')[0].split('.')
-        today = datetime.date(year=int(date_list[2]), month=int(date_list[1]), day=int(date_list[0]))
+        today = date(year=int(date_list[2]), month=int(date_list[1]), day=int(date_list[0]))
         print(f'{money_code} to RUB:', course_to_rub, today)
 
 
