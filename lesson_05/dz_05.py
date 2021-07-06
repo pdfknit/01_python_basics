@@ -12,9 +12,4 @@ def no_repeat_generator(src_list):
         if i == 1:
             yield num
 
-gen = no_repeat_generator(src)
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
 print(list(no_repeat_generator(src)))
