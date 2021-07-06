@@ -7,8 +7,14 @@ def no_repeat_generator(src_list):
         for num_02 in src_list:
             if num_02 == num:
                 i += 1
+            if i > 1:
+                break
         if i == 1:
             yield num
 
-
+gen = no_repeat_generator(src)
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
 print(list(no_repeat_generator(src)))
