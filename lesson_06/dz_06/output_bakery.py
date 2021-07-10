@@ -7,16 +7,16 @@ def output_bakery(argv):
         with open('bakery.csv', 'r', encoding='utf-8') as f:
             i = 0
             for line in f:
-                if i >= int(argv[1])-1:
+                if i >= int(argv[1]) - 1:
                     print(line, end="")
                 i += 1
     elif len(argv) == 3:
         with open('bakery.csv', 'r', encoding='utf-8') as f:
             i = 0
             for line in f:
-                if i > int(argv[2])-1:
+                if i > int(argv[2]) - 1:
                     break
-                if i >= int(argv[1])-1:
+                if i >= int(argv[1]) - 1:
                     print(line, end="")
                 i += 1
 

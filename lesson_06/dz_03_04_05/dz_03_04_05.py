@@ -1,7 +1,6 @@
 import json
 
 
-# def parsing():
 def parsing(**kwargs):
     try:
         names_f = kwargs['names_f']
