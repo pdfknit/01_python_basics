@@ -1,0 +1,30 @@
+my_project:
+    - file.py
+    - test:
+    - settings:
+      - __init__.py
+      - dev.py
+      - prod.py
+
+    - mainapp:
+      - __init__.py
+      - models.py
+      - views.py
+      - templates:
+        - test.py
+        - mainapp:
+          - base.html
+          - index.html
+
+    - authapp:
+      - __init__.py
+      - models.py
+      - views.py
+      - templates:
+          - authapp:
+            - base.html
+            - index.html
+my_project3:
+my_project2:
+  - __init__.py
+  - models.py
