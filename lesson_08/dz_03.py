@@ -24,10 +24,6 @@ def args_calc_cube(x, y):
 
 
 if __name__ == '__main__':
-    import sys
-
     x = 12
     area_1 = calc_cube(x)
     args_calc_cube(12, 'Хэй')
-
-
