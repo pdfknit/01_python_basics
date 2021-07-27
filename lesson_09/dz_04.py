@@ -1,14 +1,16 @@
 class Car:
-    def __init__(self, speed, color, name, is_police):
+    def __init__(self, speed, color, name, is_police = False):
         self.speed = speed
         self.color = color
         self.name = name
         self.is_police = is_police
 
     def stop(self):
+        self.speed = 0
         return 'Машина остановилась'
 
-    def go(self):
+    def go(self, speed):
+        self.speed = speed
         return 'Машина поехала'
 
     def turn(self, direction):
@@ -25,9 +27,6 @@ class PoliceCar(Car):
 
 
 class TownCar(Car):
-    def __init__(self, speed, color, name, is_police):
-        super().__init__(speed, color, name, is_police)
-
     def show_speed(self):
         if self.speed > 60 and not self.is_police:
             return f'Превышение скорости! Текущая скорость: {self.speed}'
@@ -36,9 +35,6 @@ class TownCar(Car):
 
 
 class WorkCar(Car):
-    def __init__(self, speed, color, name, is_police):
-        super().__init__(speed, color, name, is_police)
-
     def show_speed(self):
         if self.speed > 40 and not self.is_police:
             return f'Превышение скорости! Текущая скорость: {self.speed}'
@@ -49,13 +45,13 @@ class WorkCar(Car):
 car_01 = PoliceCar(80, 'Синий', 'Ford', True)
 print(car_01.color, car_01.name, car_01.show_speed())
 print(car_01.stop())
-print(car_01.go())
+print(car_01.go(60))
 print(car_01.turn('налево'))
 
 car_02 = TownCar(80, 'Зеленый', 'Ford', True)
 print(car_02.color, car_02.name, car_02.show_speed())
 print(car_02.stop())
-print(car_02.go())
+print(car_02.go(80))
 print(car_02.turn('направо'))
 
 car_03 = WorkCar(44, 'Красный', 'Ford', False)
