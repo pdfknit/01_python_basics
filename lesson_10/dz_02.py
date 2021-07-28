@@ -20,14 +20,20 @@ class Cloth:
 
 class Jacket(Cloth):
     def __init__(self, size):
-        self.size = size
-        self._consumption = round(self.size / 6.5 + 0.5, 3)
+        if isinstance(size, int):
+            self.size = size
+            self._consumption = round(self.size / 6.5 + 0.5, 3)
+        else:
+            raise TypeError('elements is not "int"')
 
 
 class Costume(Cloth):
     def __init__(self, height):
-        self.height = height
-        self._consumption = round(self.height * 2 + 0.3, 3)
+        if isinstance(height, int):
+            self.height = height
+            self._consumption = round(self.height * 2 + 0.3, 3)
+        else:
+            raise TypeError('elements is not "int"')
 
 
 cloth_01 = Jacket(46)
